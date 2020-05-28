@@ -24,12 +24,14 @@ pipeline {
                         '''
                         sh '''
                            cd /opt/intel
+                           rm -r linux-sgx-driver -f
                            git clone https://github.com/01org/linux-sgx-driver.git
                            cd linux-sgx-driver
                            git checkout sgx_driver_1.9
                            make
 
                            cd /opt/intel
+                           rm -r SGXDataCenterAttestationPrimitives -f
                            git clone https://github.com/intel/SGXDataCenterAttestationPrimitives.git
                            cd SGXDataCenterAttestationPrimitives
                            git checkout DCAP_1.5
