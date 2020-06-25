@@ -99,7 +99,7 @@ pipeline {
                             '''
                         sh '''
                            # Workaround for cache.mk in submodule
-                           rm -f /Pal/src/host/Linux-SGX/sgx-driver/.cache.mk
+                           rm -f Pal/src/host/Linux-SGX/sgx-driver/.cache.mk
                            # Workaround LTP bug (see https://github.com/linux-test-project/ltp/issues/560 for upstream fix):
                            git -C LibOS/shim/test/ltp/src checkout -- utils/ffsb-6.0-rc2/config.h.in utils/ffsb-6.0-rc2/configure
 
